@@ -12,7 +12,7 @@ class Users
         $sql = "INSERT INTO users (name, last_name, username, email, password, image, state) VALUES ('$name', '$last_name', '$username', '$email', '$password', '$image', '1')";
         return executeConsult($sql);
     }
-    public function update($name, $last_name, $username, $email, $password, $image)
+    public function update($id_user, $name, $last_name, $username, $email, $password, $image)
     {
         if (empty($password)) {
             $sql = "UPDATE users SET name='$name', last_name='$last_name', username='$username', email='$email', password='$password', image='$image' WHERE id_user='$id_user'";

@@ -4,7 +4,7 @@ session_start();
 
 require_once("..models/Users.php");
 
-$user = new User();
+$user = new Users();
 
 $iduser = isset($_POST["iduser"]) ? cleanString($_POST["iduser"]) :"";
 $name = isset($_POST["name"]) ? cleanString($_POST["name"]) :"";
@@ -51,7 +51,7 @@ switch ($_GET["op"]) {
         echo json_encode($rspta);
         break;
     case "list":
-        $rspta = $user->list();
+        $rspta = $user->toList();
         $data = array();
 
         while($reg = $rspta->fetch_object()) {
