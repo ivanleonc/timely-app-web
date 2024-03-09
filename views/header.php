@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Compartiendo | Có....</title>
+  <title>Timely | Inicio</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -17,7 +17,7 @@
          folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../public/css/_all-skins.min.css">
   <link rel="apple-touch-icon" href="../public/img/apple-touch-icon.png">
-  <link rel="shortcut icon" href="../public/img/favicon.ico">
+  <link rel="shortcut icon" href="../public/dist/img/user_default.jpg">
 
   <!-- DATATABLES -->
   <link rel="stylesheet" type="text/css" href="../public/datatables/jquery.dataTables.min.css">
@@ -51,8 +51,8 @@
 
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="../public/dist/img/user_default.png" class="user-image" alt="User Image">
-                <span class="hidden-xs">CompartiendoCódigos</span>
+                <img src="../public/dist/img/user_default.jpg" class="user-image" alt="User Image">
+                <span class="hidden-xs">Timely</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
@@ -60,8 +60,8 @@
                   <img src="../public/dist/img/user_default.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    CompartiendoCódigos - Desarrollo web
-                    <small>2021-2022</small>
+                    ivanleonc - Desarrollo web
+                    <small>2024</small>
                   </p>
                 </li>
                 <!-- Menu Footer-->
@@ -108,8 +108,8 @@
           </li>
 
 
-          <li><a target="_blank" href="https://www.compartiendocodigos.com"><i class="fa fa-question-circle"></i>
-              <span>CompartiendoCódigos</span><small class="label pull-right bg-yellow">web</small></a></li>
+          <li><a target="_blank" href="https://github.com/ivanleonc"><i class="fa fa-question-circle"></i>
+              <span>Ayuda</span><small class="label pull-right bg-yellow">web</small></a></li>
         </ul>
       </section>
       <!-- /.sidebar -->
