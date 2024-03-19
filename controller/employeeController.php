@@ -1,14 +1,15 @@
 <?php
-require_once "..models/Employee.php";
+require_once "../models/Employee.php";
 
 $employee = new Employee();
 
-$employee_id = isset($_POST["employee_id"]) ? cleanString($_POST["employee_id"]) :"";
-$name = isset($_POST["name"]) ? cleanString($_POST["name"]) :"";
-$last_name = isset($_POST["last_name"]) ? cleanString($_POST["last_name"]) :"";
-$document_number = isset($_POST["document_number"]) ? cleanString($_POST["document_number"]) :"";
-$phone = isset($_POST["phone"]) ? cleanString($_POST["phone"]) :"";
-$code = isset($_POST["code"]) ? cleanString($_POST["code"]) :"";
+$employee_id = isset($_POST["id_employee"]) ? cleanString($_POST["id_employee"]) :"";
+$name = isset($_POST["name_employee"]) ? cleanString($_POST["name_employee"]) :"";
+$last_name = isset($_POST["last_name_employee"]) ? cleanString($_POST["last_name_employee"]) :"";
+$document_number = isset($_POST["document_employee"]) ? cleanString($_POST["document_employee"]) :"";
+$phone = isset($_POST["phone_employee"]) ? cleanString($_POST["phone_employee"]) :"";
+$code = isset($_POST["code_employee"]) ? cleanString($_POST["code_employee"]) :"";
+
 
 switch($_GET["op"]){
 
@@ -51,8 +52,9 @@ switch($_GET["op"]){
         break;
     case "select_employee":
         $rspta = $employee->select();
-
+        var_dump(json_encode($rspta));
         while($reg = $rspta->fetch_object()){
+            var_dump(json_encode($reg));
             echo '<option value='.$reg->id.'>'.$reg->name.''.$reg->last_name. '</option>';
         }
         break;

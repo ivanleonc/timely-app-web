@@ -15,7 +15,7 @@ class Employee{
     }
     public function show($employee_id){
         $sql = "SELECT * FROM employees WHERE id='$employee_id'";
-        executeConsultSingleRow($sql);
+        return executeConsultSingleRow($sql);
     }
     public function list(){
         $sql = "SELECT * FROM employees";

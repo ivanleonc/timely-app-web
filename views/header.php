@@ -35,9 +35,9 @@
       <!-- Logo -->
       <a href="#" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>C</b> C</span>
+        <span class="logo-mini"><b>T</b> T</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>C</b> CÓDIGOS</span>
+        <span class="logo-lg"><b>T</b> Timely</span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top">
@@ -51,16 +51,16 @@
 
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="../public/dist/img/user_default.jpg" class="user-image" alt="User Image">
-                <span class="hidden-xs">Timely</span>
+                <img src="../files/users/<?php echo $_SESSION["image_user"]?>" class="user-image" alt="User Image">
+                <span class="hidden-xs"><?php echo $_SESSION["name"]?></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  <img src="../public/dist/img/user_default.jpg" class="img-circle" alt="User Image">
+                  <img src="../files/users/<?php echo $_SESSION["image_user"]?>" class="img-circle" alt="User Image">
 
                   <p>
-                    ivanleonc - Desarrollo web
+                  <?php echo $_SESSION["name"]?>
                     <small>2024</small>
                   </p>
                 </li>
@@ -70,7 +70,7 @@
                     <a href="#" class="btn btn-default btn-flat">Perfil</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Salir</a>
+                    <a href="../controller/userController.php?op=exit" class="btn btn-default btn-flat">Salir</a>
                   </div>
                 </li>
               </ul>
@@ -92,22 +92,42 @@
         <ul class="sidebar-menu" data-widget="tree">
 
 
-          <li><a href="#"><i class="fa  fa-dashboard (alias)"></i> <span>Escritorio</span></a>
+          <li><a href="dashboard.php"><i class="fa  fa-dashboard (alias)"></i> <span>Dashboard</span></a>
           </li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-laptop"></i> <span>Módulo</span>
+              <i class="fa fa-users"></i> <span>Usuarios</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Opcion 1</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Opcion 2</a></li>
+              <li><a href="user.php"><i class="fa fa-circle-o"></i> Usuarios</a></li>
             </ul>
           </li>
-
-
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-lock"></i> <span>Empleados</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="employee.php"><i class="fa fa-circle-o"></i> Empleados</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-list"></i> <span>Asistencias</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="assists.php"><i class="fa fa-circle-o"></i> Asistencias</a></li>
+              <li><a href="ReportAssists.php"><i class="fa fa-circle-o"></i> Reporte de Asistencias</a></li>
+            </ul>
+          </li>
           <li><a target="_blank" href="https://github.com/ivanleonc"><i class="fa fa-question-circle"></i>
               <span>Ayuda</span><small class="label pull-right bg-yellow">web</small></a></li>
         </ul>

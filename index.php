@@ -1,2 +1,2 @@
 <?php 
-header('location: vistas/default.php');
+header('location: views/login.html');
